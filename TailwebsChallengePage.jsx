@@ -235,34 +235,117 @@ const styles = `
 
 /* ─── DATA ─── */
 const faqs = [
-  { q: "What exactly do I get from the 24-hour challenge?", a: "You'll receive a working clickable prototype or MVP of your idea — depending on complexity. This includes UI/UX design, basic functionality, and a roadmap for the full build. Our AI-assisted workflow means we move fast without sacrificing quality." },
-  { q: "How much does it cost?", a: "The 24-hour challenge is offered at a fraction of traditional development costs — typically 1/10th of what a conventional agency would charge for the same output. Exact pricing depends on your project scope, which we discuss during your 30-minute kick-off call." },
-  { q: "What if I just have a rough idea — is that enough?", a: "Absolutely. That's exactly what we're built for. Share your rough idea in the form, and during the kick-off call our product consultants will help shape it into a buildable concept. You don't need to have a complete spec — just your vision." },
-  { q: "How are you able to do this so fast?", a: "Tailwebs has spent 10+ years perfecting our development process, and we've now integrated AI into every stage — ideation, wireframing, design, and development. Our team works in parallel sprints, cutting the work that used to take weeks into hours." },
-  { q: "What happens after the challenge — can you build the full product?", a: "Yes. The 24-hour challenge is often the first step of a longer engagement. We guide you from prototype to full build to scaling. Many of our long-term clients started with exactly this challenge." },
-  { q: "How many slots are available?", a: "We deliberately keep challenge slots limited to ensure each project gets dedicated attention. We typically open 10 slots per week. Once they're filled, you're moved to the next available week." },
+  {
+    q: "What exactly do I get from the 24-hour challenge?",
+    a: "You'll receive a working clickable prototype or MVP of your idea — depending on complexity. This includes UI/UX design, basic functionality, and a roadmap for the full build. Our AI-assisted workflow means we move fast without sacrificing quality.",
+  },
+  {
+    q: "How much does it cost?",
+    a: "The 24-hour challenge is offered at a fraction of traditional development costs — typically 1/10th of what a conventional agency would charge for the same output. Exact pricing depends on your project scope, which we discuss during your 30-minute kick-off call.",
+  },
+  {
+    q: "What if I just have a rough idea — is that enough?",
+    a: "Absolutely. That's exactly what we're built for. Share your rough idea in the form, and during the kick-off call our product consultants will help shape it into a buildable concept. You don't need to have a complete spec — just your vision.",
+  },
+  {
+    q: "How are you able to do this so fast?",
+    a: "Tailwebs has spent 10+ years perfecting our development process, and we've now integrated AI into every stage — ideation, wireframing, design, and development. Our team works in parallel sprints, cutting the work that used to take weeks into hours.",
+  },
+  {
+    q: "What happens after the challenge — can you build the full product?",
+    a: "Yes. The 24-hour challenge is often the first step of a longer engagement. We guide you from prototype to full build to scaling. Many of our long-term clients started with exactly this challenge.",
+  },
+  {
+    q: "How many slots are available?",
+    a: "We deliberately keep challenge slots limited to ensure each project gets dedicated attention. We typically open 10 slots per week. Once they're filled, you're moved to the next available week.",
+  },
 ];
 
 const steps = [
-  { num: "01", title: "Book Your Slot", desc: "Fill out the form below. Tell us your idea in plain language — no tech jargon needed. We'll confirm your 30-minute kick-off call within 2 hours.", time: "Day 0" },
-  { num: "02", title: "The Kick-off Call", desc: "Our product team listens to your vision, maps out the core features, and aligns on what we'll build. This is where ideas become build plans.", time: "Day 0 — 30 min" },
-  { num: "03", title: "AI-Powered Build", desc: "Our team goes heads-down. Using AI across ideation, design, and development — we build your prototype in 24 to 72 hours flat.", time: "24–72 Hours" },
-  { num: "04", title: "You Review & Decide", desc: "We deliver a working prototype. You review it, share feedback, and decide how you want to move forward — zero pressure.", time: "Day 3–4" },
+  {
+    num: "01",
+    title: "Book Your Slot",
+    desc: "Fill out the form below. Tell us your idea in plain language — no tech jargon needed. We'll confirm your 30-minute kick-off call within 2 hours.",
+    time: "Day 0",
+  },
+  {
+    num: "02",
+    title: "The Kick-off Call",
+    desc: "Our product team listens to your vision, maps out the core features, and aligns on what we'll build. This is where ideas become build plans.",
+    time: "Day 0 — 30 min",
+  },
+  {
+    num: "03",
+    title: "AI-Powered Build",
+    desc: "Our team goes heads-down. Using AI across ideation, design, and development — we build your prototype in 24 to 72 hours flat.",
+    time: "24–72 Hours",
+  },
+  {
+    num: "04",
+    title: "You Review & Decide",
+    desc: "We deliver a working prototype. You review it, share feedback, and decide how you want to move forward — zero pressure.",
+    time: "Day 3–4",
+  },
 ];
 
 const gets = [
-  { icon: "🎨", title: "UX/UI Design", desc: "Professional screens designed for your product — not a template. We design for your users, your brand, and your use case." },
-  { icon: "⚡", title: "Working Prototype", desc: "A clickable, shareable prototype you can show investors, co-founders, or customers. Real, not a mockup." },
-  { icon: "🗺️", title: "MVP Roadmap", desc: "A clear, prioritised plan for building the full product — what to build first, what to defer, and why." },
-  { icon: "🤖", title: "AI-Assisted Development", desc: "Every component built with AI assistance — meaning faster output, fewer bugs, and smarter architecture from day one." },
-  { icon: "📊", title: "Tech Stack Recommendation", desc: "We tell you exactly what technologies to use for your product to scale — and why. No vendor bias, just the right tools." },
-  { icon: "📞", title: "Post-Delivery Call", desc: "A debrief call where we walk you through what was built, answer all questions, and outline the path to a full launch." },
+  {
+    icon: "🎨",
+    title: "UX/UI Design",
+    desc: "Professional screens designed for your product — not a template. We design for your users, your brand, and your use case.",
+  },
+  {
+    icon: "⚡",
+    title: "Working Prototype",
+    desc: "A clickable, shareable prototype you can show investors, co-founders, or customers. Real, not a mockup.",
+  },
+  {
+    icon: "🗺️",
+    title: "MVP Roadmap",
+    desc: "A clear, prioritised plan for building the full product — what to build first, what to defer, and why.",
+  },
+  {
+    icon: "🤖",
+    title: "AI-Assisted Development",
+    desc: "Every component built with AI assistance — meaning faster output, fewer bugs, and smarter architecture from day one.",
+  },
+  {
+    icon: "📊",
+    title: "Tech Stack Recommendation",
+    desc: "We tell you exactly what technologies to use for your product to scale — and why. No vendor bias, just the right tools.",
+  },
+  {
+    icon: "📞",
+    title: "Post-Delivery Call",
+    desc: "A debrief call where we walk you through what was built, answer all questions, and outline the path to a full launch.",
+  },
 ];
 
 const testimonials = [
-  { initials: "SP", name: "Shrenik Parmar", role: "CEO & Founder, Proodle Solutions Ltd", stars: 5, quote: "We were satisfied with the final product, which helped us win international awards. Their ability to deliver under pressure stood out. The team was easy to work with — responsive and managed timelines well." },
-  { initials: "AK", name: "Atul Kajaria", role: "Director, Procurestore.com", stars: 5, quote: "As a result of Tailwebs' efforts, we saw an increase in site visitors, resulting in more conversions and sales. The team managed the project well — met deadlines and responded to queries promptly." },
-  { initials: "NG", name: "Neha Goel", role: "Owner, Nepra", stars: 5, quote: "Thanks to Tailwebs, we were able to reach global audiences. Website traffic increased significantly. We were impressed with the team's overall talent and their ability to understand what we actually needed." },
+  {
+    initials: "SP",
+    name: "Shrenik Parmar",
+    role: "CEO & Founder, Proodle Solutions Ltd",
+    stars: 5,
+    quote:
+      "We were satisfied with the final product, which helped us win international awards. Their ability to deliver under pressure stood out. The team was easy to work with — responsive and managed timelines well.",
+  },
+  {
+    initials: "AK",
+    name: "Atul Kajaria",
+    role: "Director, Procurestore.com",
+    stars: 5,
+    quote:
+      "As a result of Tailwebs' efforts, we saw an increase in site visitors, resulting in more conversions and sales. The team managed the project well — met deadlines and responded to queries promptly.",
+  },
+  {
+    initials: "NG",
+    name: "Neha Goel",
+    role: "Owner, Nepra",
+    stars: 5,
+    quote:
+      "Thanks to Tailwebs, we were able to reach global audiences. Website traffic increased significantly. We were impressed with the team's overall talent and their ability to understand what we actually needed.",
+  },
 ];
 
 /* ─── HOOKS ─── */
@@ -291,8 +374,13 @@ function useIntersectionObserver(options = {}) {
     const el = ref.current;
     if (!el) return;
     const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setIsVisible(true); observer.unobserve(el); } },
-      { threshold: 0.2, ...options }
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(el);
+        }
+      },
+      { threshold: 0.2, ...options },
     );
     observer.observe(el);
     return () => observer.disconnect();
@@ -304,8 +392,15 @@ function useIntersectionObserver(options = {}) {
 function StatCard({ num, suffix, label, start }) {
   const count = useCountUp(num, 1800, start);
   return (
-    <div className="stat-card" role="figure" aria-label={`${num}${suffix} — ${label}`}>
-      <div className="stat-num" aria-hidden="true">{count}{suffix}</div>
+    <div
+      className="stat-card"
+      role="figure"
+      aria-label={`${num}${suffix} — ${label}`}
+    >
+      <div className="stat-num" aria-hidden="true">
+        {count}
+        {suffix}
+      </div>
       <div className="stat-label">{label}</div>
     </div>
   );
@@ -322,7 +417,9 @@ function FAQ({ q, a, id }) {
         aria-controls={`faq-answer-${id}`}
       >
         {q}
-        <span className={`faq-arrow ${open ? "open" : ""}`} aria-hidden="true">▾</span>
+        <span className={`faq-arrow ${open ? "open" : ""}`} aria-hidden="true">
+          ▾
+        </span>
       </button>
       <div
         id={`faq-answer-${id}`}
@@ -339,7 +436,10 @@ function FAQ({ q, a, id }) {
 function FadeUp({ children, className = "", delay = "" }) {
   const [ref, isVisible] = useIntersectionObserver();
   return (
-    <div ref={ref} className={`fade-up ${isVisible ? "visible" : ""} ${delay} ${className}`}>
+    <div
+      ref={ref}
+      className={`fade-up ${isVisible ? "visible" : ""} ${delay} ${className}`}
+    >
       {children}
     </div>
   );
@@ -358,8 +458,14 @@ function validatePhone(phone) {
 /* ─── MAIN PAGE ─── */
 export default function ChallengePage() {
   const [formData, setFormData] = useState({
-    firstName: "", lastName: "", email: "", phone: "",
-    company: "", idea: "", budget: "", hear: ""
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    company: "",
+    idea: "",
+    budget: "",
+    hear: "",
   });
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
@@ -380,7 +486,9 @@ export default function ChallengePage() {
   // Hero fade-in on mount
   useEffect(() => {
     if (heroRef.current) {
-      heroRef.current.querySelectorAll(".fade-up").forEach(el => el.classList.add("visible"));
+      heroRef.current
+        .querySelectorAll(".fade-up")
+        .forEach((el) => el.classList.add("visible"));
     }
   }, []);
 
@@ -389,8 +497,10 @@ export default function ChallengePage() {
     const el = statsRef.current;
     if (!el) return;
     const observer = new IntersectionObserver(
-      ([e]) => { if (e.isIntersecting) setStatsVisible(true); },
-      { threshold: 0.3 }
+      ([e]) => {
+        if (e.isIntersecting) setStatsVisible(true);
+      },
+      { threshold: 0.3 },
     );
     observer.observe(el);
     return () => observer.disconnect();
@@ -402,7 +512,8 @@ export default function ChallengePage() {
     if (!formData.lastName.trim()) errs.lastName = "Last name is required";
     if (!formData.email.trim()) errs.email = "Email is required";
     else if (!validateEmail(formData.email)) errs.email = "Enter a valid email";
-    if (!validatePhone(formData.phone)) errs.phone = "Enter a valid phone number";
+    if (!validatePhone(formData.phone))
+      errs.phone = "Enter a valid phone number";
     if (!formData.idea.trim()) errs.idea = "Tell us about your idea";
     return errs;
   }, [formData]);
@@ -425,7 +536,7 @@ export default function ChallengePage() {
       setSubmitted(true);
     } catch {
       // Fallback: simulate success for static deployments
-      await new Promise(r => setTimeout(r, 1500));
+      await new Promise((r) => setTimeout(r, 1500));
       setSubmitted(true);
     } finally {
       setSubmitting(false);
@@ -433,8 +544,8 @@ export default function ChallengePage() {
   };
 
   const updateField = (field) => (e) => {
-    setFormData(prev => ({ ...prev, [field]: e.target.value }));
-    if (errors[field]) setErrors(prev => ({ ...prev, [field]: undefined }));
+    setFormData((prev) => ({ ...prev, [field]: e.target.value }));
+    if (errors[field]) setErrors((prev) => ({ ...prev, [field]: undefined }));
   };
 
   const slotsLeft = 7;
@@ -446,15 +557,45 @@ export default function ChallengePage() {
 
   return (
     <>
-      <style>{FONTS}{styles}</style>
+      <style>
+        {FONTS}
+        {styles}
+      </style>
 
       {/* NAV */}
-      <nav className={`nav ${navScrolled ? "scrolled" : ""}`} role="navigation" aria-label="Main navigation">
-        <a className="nav-logo" href="/" aria-label="Tailwebs home">tail<span>webs</span></a>
+      <nav
+        className={`nav ${navScrolled ? "scrolled" : ""}`}
+        role="navigation"
+        aria-label="Main navigation"
+      >
+        <a className="nav-logo" href="/" aria-label="Tailwebs home">
+          tail<span>webs</span>
+        </a>
         <div className="nav-links">
-          <span className="nav-link" onClick={scrollTo("how")} tabIndex={0} role="link">How It Works</span>
-          <span className="nav-link" onClick={scrollTo("deliverables")} tabIndex={0} role="link">Deliverables</span>
-          <span className="nav-link" onClick={scrollTo("faq")} tabIndex={0} role="link">FAQ</span>
+          <span
+            className="nav-link"
+            onClick={scrollTo("how")}
+            tabIndex={0}
+            role="link"
+          >
+            How It Works
+          </span>
+          <span
+            className="nav-link"
+            onClick={scrollTo("deliverables")}
+            tabIndex={0}
+            role="link"
+          >
+            Deliverables
+          </span>
+          <span
+            className="nav-link"
+            onClick={scrollTo("faq")}
+            tabIndex={0}
+            role="link"
+          >
+            FAQ
+          </span>
         </div>
         <button className="nav-cta" onClick={scrollTo("challenge-form")}>
           Claim Your Slot
@@ -476,13 +617,20 @@ export default function ChallengePage() {
           <h1 className="hero-h1 fade-up delay-1" id="hero-heading">
             Your Idea. Built in{" "}
             <span className="hl hl-gradient">72 Hours.</span>
-            <br />Powered by <span className="hl-serif">AI.</span>
+            <br />
+            Powered by <span className="hl-serif">AI.</span>
           </h1>
           <p className="hero-sub fade-up delay-2">
-            Tailwebs is a <strong>10+ year tech company</strong> that has mastered AI-driven development. We ideate, design, and deliver your product in 24–72 hours — at <strong>1/10th the traditional cost.</strong>
+            Tailwebs is a <strong>10+ year tech company</strong> that has
+            mastered AI-driven development. We ideate, design, and deliver your
+            product in 24–72 hours — at{" "}
+            <strong>1/10th the traditional cost.</strong>
           </p>
           <div className="hero-actions fade-up delay-3">
-            <button className="btn-primary" onClick={scrollTo("challenge-form")}>
+            <button
+              className="btn-primary"
+              onClick={scrollTo("challenge-form")}
+            >
               Start the Challenge
               <span aria-hidden="true">→</span>
             </button>
@@ -490,22 +638,70 @@ export default function ChallengePage() {
               See How It Works
             </button>
           </div>
-          <div className="trust-strip fade-up delay-4" role="list" aria-label="Trust signals">
-            <div className="trust-item" role="listitem"><span className="trust-icon" aria-hidden="true">⭐</span> 4.8 on Clutch</div>
-            <div className="trust-item" role="listitem"><span className="trust-icon" aria-hidden="true">✅</span> 100+ Projects Delivered</div>
-            <div className="trust-item" role="listitem"><span className="trust-icon" aria-hidden="true">🏆</span> Forbes 2022 Recognised</div>
-            <div className="trust-item" role="listitem"><span className="trust-icon" aria-hidden="true">🚀</span> 98% Client Satisfaction</div>
+          <div
+            className="trust-strip fade-up delay-4"
+            role="list"
+            aria-label="Trust signals"
+          >
+            <div className="trust-item" role="listitem">
+              <span className="trust-icon" aria-hidden="true">
+                ⭐
+              </span>{" "}
+              4.8 on Clutch
+            </div>
+            <div className="trust-item" role="listitem">
+              <span className="trust-icon" aria-hidden="true">
+                ✅
+              </span>{" "}
+              100+ Projects Delivered
+            </div>
+            <div className="trust-item" role="listitem">
+              <span className="trust-icon" aria-hidden="true">
+                🏆
+              </span>{" "}
+              Forbes 2022 Recognised
+            </div>
+            <div className="trust-item" role="listitem">
+              <span className="trust-icon" aria-hidden="true">
+                🚀
+              </span>{" "}
+              98% Client Satisfaction
+            </div>
           </div>
         </div>
       </section>
 
       {/* STATS */}
-      <section className="stats-section" ref={statsRef} aria-label="Company statistics">
+      <section
+        className="stats-section"
+        ref={statsRef}
+        aria-label="Company statistics"
+      >
         <div className="stats-grid">
-          <StatCard num={10} suffix="+" label="Years building stellar products" start={statsVisible} />
-          <StatCard num={100} suffix="+" label="Successful projects delivered" start={statsVisible} />
-          <StatCard num={98} suffix="%" label="Customer satisfaction rate" start={statsVisible} />
-          <StatCard num={72} suffix="hrs" label="Maximum build time for challenge" start={statsVisible} />
+          <StatCard
+            num={10}
+            suffix="+"
+            label="Years building stellar products"
+            start={statsVisible}
+          />
+          <StatCard
+            num={100}
+            suffix="+"
+            label="Successful projects delivered"
+            start={statsVisible}
+          />
+          <StatCard
+            num={98}
+            suffix="%"
+            label="Customer satisfaction rate"
+            start={statsVisible}
+          />
+          <StatCard
+            num={72}
+            suffix="hrs"
+            label="Maximum build time for challenge"
+            start={statsVisible}
+          />
         </div>
       </section>
 
@@ -515,15 +711,23 @@ export default function ChallengePage() {
           <div className="how-header">
             <FadeUp>
               <div className="section-tag">The Process</div>
-              <h2 className="section-h2" id="how-heading">From idea to prototype in <span className="hl-serif">four steps</span></h2>
-              <p className="section-sub">No long contracts, no months of waiting, no vague timelines. Here's exactly how the 24-hour challenge works.</p>
+              <h2 className="section-h2" id="how-heading">
+                From idea to prototype in{" "}
+                <span className="hl-serif">four steps</span>
+              </h2>
+              <p className="section-sub">
+                No long contracts, no months of waiting, no vague timelines.
+                Here's exactly how the 24-hour challenge works.
+              </p>
             </FadeUp>
           </div>
           <FadeUp>
             <div className="steps-grid" role="list">
-              {steps.map(s => (
+              {steps.map((s) => (
                 <div className="step-card" key={s.num} role="listitem">
-                  <div className="step-num" aria-hidden="true">{s.num}</div>
+                  <div className="step-num" aria-hidden="true">
+                    {s.num}
+                  </div>
                   <div className="step-title">{s.title}</div>
                   <div className="step-desc">{s.desc}</div>
                   <span className="step-time">{s.time}</span>
@@ -535,41 +739,71 @@ export default function ChallengePage() {
       </section>
 
       {/* URGENCY BAR */}
-      <div className="urgency-bar" role="status" aria-label="Availability status">
+      <div
+        className="urgency-bar"
+        role="status"
+        aria-label="Availability status"
+      >
         <div className="urgency-inner">
           <div style={{ textAlign: "center" }}>
             <div className="urgency-count">{slotsLeft}</div>
             <div className="urgency-label">slots left this week</div>
           </div>
-          <div className="slots-row" aria-label={`${totalSlots - slotsLeft} of ${totalSlots} slots filled`} role="img">
+          <div
+            className="slots-row"
+            aria-label={`${totalSlots - slotsLeft} of ${totalSlots} slots filled`}
+            role="img"
+          >
             {Array.from({ length: totalSlots }).map((_, i) => (
-              <div key={i} className={`slot ${i < totalSlots - slotsLeft ? "filled" : "empty"}`} />
+              <div
+                key={i}
+                className={`slot ${i < totalSlots - slotsLeft ? "filled" : "empty"}`}
+              />
             ))}
           </div>
           <div className="urgency-text">
             We limit slots to ensure every project gets dedicated focus.
           </div>
-          <button className="btn-primary" style={{ padding: "12px 24px", fontSize: "0.9rem" }} onClick={scrollTo("challenge-form")}>
+          <button
+            className="btn-primary"
+            style={{ padding: "12px 24px", fontSize: "0.9rem" }}
+            onClick={scrollTo("challenge-form")}
+          >
             Reserve My Slot →
           </button>
         </div>
       </div>
 
       {/* WHAT YOU GET */}
-      <section className="section" id="deliverables" aria-labelledby="get-heading">
+      <section
+        className="section"
+        id="deliverables"
+        aria-labelledby="get-heading"
+      >
         <div style={{ maxWidth: 1280, margin: "0 auto" }}>
           <div style={{ marginBottom: 56 }}>
             <FadeUp>
               <div className="section-tag">Deliverables</div>
-              <h2 className="section-h2" id="get-heading">Everything you get from the <span className="hl-serif">challenge</span></h2>
-              <p className="section-sub">This is not a discovery call dressed up as a product. You walk away with real, usable output.</p>
+              <h2 className="section-h2" id="get-heading">
+                Everything you get from the{" "}
+                <span className="hl-serif">challenge</span>
+              </h2>
+              <p className="section-sub">
+                This is not a discovery call dressed up as a product. You walk
+                away with real, usable output.
+              </p>
             </FadeUp>
           </div>
           <div className="get-grid">
             {gets.map((g, i) => (
-              <FadeUp key={g.title} delay={i < 2 ? "delay-1" : i < 4 ? "delay-2" : "delay-3"}>
+              <FadeUp
+                key={g.title}
+                delay={i < 2 ? "delay-1" : i < 4 ? "delay-2" : "delay-3"}
+              >
                 <div className="get-card">
-                  <div className="get-icon" aria-hidden="true">{g.icon}</div>
+                  <div className="get-icon" aria-hidden="true">
+                    {g.icon}
+                  </div>
                   <div className="get-title">{g.title}</div>
                   <div className="get-desc">{g.desc}</div>
                 </div>
@@ -580,23 +814,41 @@ export default function ChallengePage() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="section testi-section" aria-labelledby="testi-heading">
+      <section
+        className="section testi-section"
+        aria-labelledby="testi-heading"
+      >
         <div className="testi-wrap">
           <div style={{ marginBottom: 56 }}>
             <FadeUp>
               <div className="section-tag">Client Stories</div>
-              <h2 className="section-h2" id="testi-heading">What our clients <span className="hl-serif">actually say</span></h2>
-              <p className="section-sub">We've built products that won international awards, hit top app charts, and raised funding.</p>
+              <h2 className="section-h2" id="testi-heading">
+                What our clients <span className="hl-serif">actually say</span>
+              </h2>
+              <p className="section-sub">
+                We've built products that won international awards, hit top app
+                charts, and raised funding.
+              </p>
             </FadeUp>
           </div>
           <div className="testi-grid">
             {testimonials.map((t, i) => (
-              <FadeUp key={t.name} delay={i === 0 ? "delay-1" : i === 1 ? "delay-2" : "delay-3"}>
+              <FadeUp
+                key={t.name}
+                delay={i === 0 ? "delay-1" : i === 1 ? "delay-2" : "delay-3"}
+              >
                 <div className="testi-card">
-                  <div className="testi-stars" aria-label={`${t.stars} out of 5 stars`}>{"★".repeat(t.stars)}</div>
+                  <div
+                    className="testi-stars"
+                    aria-label={`${t.stars} out of 5 stars`}
+                  >
+                    {"★".repeat(t.stars)}
+                  </div>
                   <blockquote className="testi-quote">"{t.quote}"</blockquote>
                   <div className="testi-author">
-                    <div className="testi-avatar" aria-hidden="true">{t.initials}</div>
+                    <div className="testi-avatar" aria-hidden="true">
+                      {t.initials}
+                    </div>
                     <div>
                       <div className="testi-name">{t.name}</div>
                       <div className="testi-role">{t.role}</div>
@@ -615,34 +867,75 @@ export default function ChallengePage() {
           <div style={{ marginBottom: 52 }}>
             <FadeUp>
               <div className="section-tag">Questions</div>
-              <h2 className="section-h2" id="faq-heading">Everything you're <span className="hl-serif">wondering</span></h2>
+              <h2 className="section-h2" id="faq-heading">
+                Everything you're <span className="hl-serif">wondering</span>
+              </h2>
             </FadeUp>
           </div>
-          {faqs.map((f, i) => <FAQ key={i} id={i} q={f.q} a={f.a} />)}
+          {faqs.map((f, i) => (
+            <FAQ key={i} id={i} q={f.q} a={f.a} />
+          ))}
         </div>
       </section>
 
       {/* FORM */}
-      <section className="form-section" id="challenge-form" aria-labelledby="form-heading">
+      <section
+        className="form-section"
+        id="challenge-form"
+        aria-labelledby="form-heading"
+      >
         <div className="form-glow" aria-hidden="true" />
         <div className="form-wrap">
           <div className="form-card">
             {submitted ? (
               <div className="success-box" role="alert">
-                <div className="success-icon" aria-hidden="true">🚀</div>
-                <div className="success-title">You're in. We'll be in touch within 2 hours.</div>
+                <div className="success-icon" aria-hidden="true">
+                  🚀
+                </div>
+                <div className="success-title">
+                  You're in. We'll be in touch within 2 hours.
+                </div>
                 <p className="success-msg">
-                  Thanks {formData.firstName}! Your challenge slot is being confirmed. Keep an eye on <strong>{formData.email}</strong> — our product team will reach out with your kick-off call link.
+                  Thanks {formData.firstName}! Your challenge slot is being
+                  confirmed. Keep an eye on <strong>{formData.email}</strong> —
+                  our product team will reach out with your kick-off call link.
                 </p>
               </div>
             ) : (
               <>
-                <div className="section-tag" style={{ marginBottom: 16, background: "rgba(230,57,70,0.1)", borderColor: "rgba(230,57,70,0.2)" }}>Start the Challenge</div>
-                <div className="form-title" id="form-heading">Reserve your slot.<br />Share your idea.</div>
-                <p className="form-subtitle">We'll confirm your slot and book your 30-minute kick-off call within 2 hours. No commitment needed — just your idea.</p>
+                <div
+                  className="section-tag"
+                  style={{
+                    marginBottom: 16,
+                    background: "rgba(230,57,70,0.1)",
+                    borderColor: "rgba(230,57,70,0.2)",
+                  }}
+                >
+                  Start the Challenge
+                </div>
+                <div className="form-title" id="form-heading">
+                  Reserve your slot.
+                  <br />
+                  Share your idea.
+                </div>
+                <p className="form-subtitle">
+                  We'll confirm your slot and book your 30-minute kick-off call
+                  within 2 hours. No commitment needed — just your idea.
+                </p>
 
                 {submitError && (
-                  <div role="alert" style={{ background: "rgba(207,46,46,0.1)", border: "1px solid rgba(207,46,46,0.2)", borderRadius: "var(--tw-radius-lg)", padding: "12px 16px", marginBottom: 20, fontSize: "0.88rem", color: "#ff6b6b" }}>
+                  <div
+                    role="alert"
+                    style={{
+                      background: "rgba(207,46,46,0.1)",
+                      border: "1px solid rgba(207,46,46,0.2)",
+                      borderRadius: "var(--tw-radius-lg)",
+                      padding: "12px 16px",
+                      marginBottom: 20,
+                      fontSize: "0.88rem",
+                      color: "#ff6b6b",
+                    }}
+                  >
                     {submitError}
                   </div>
                 )}
@@ -650,7 +943,9 @@ export default function ChallengePage() {
                 <form onSubmit={handleSubmit} noValidate>
                   <div className="form-row">
                     <div className="form-group" style={{ marginBottom: 0 }}>
-                      <label className="form-label" htmlFor="firstName">First Name *</label>
+                      <label className="form-label" htmlFor="firstName">
+                        First Name *
+                      </label>
                       <input
                         id="firstName"
                         required
@@ -659,12 +954,24 @@ export default function ChallengePage() {
                         value={formData.firstName}
                         onChange={updateField("firstName")}
                         aria-invalid={!!errors.firstName}
-                        aria-describedby={errors.firstName ? "err-firstName" : undefined}
+                        aria-describedby={
+                          errors.firstName ? "err-firstName" : undefined
+                        }
                       />
-                      {errors.firstName && <span id="err-firstName" className="form-error" role="alert">{errors.firstName}</span>}
+                      {errors.firstName && (
+                        <span
+                          id="err-firstName"
+                          className="form-error"
+                          role="alert"
+                        >
+                          {errors.firstName}
+                        </span>
+                      )}
                     </div>
                     <div className="form-group" style={{ marginBottom: 0 }}>
-                      <label className="form-label" htmlFor="lastName">Last Name *</label>
+                      <label className="form-label" htmlFor="lastName">
+                        Last Name *
+                      </label>
                       <input
                         id="lastName"
                         required
@@ -673,15 +980,27 @@ export default function ChallengePage() {
                         value={formData.lastName}
                         onChange={updateField("lastName")}
                         aria-invalid={!!errors.lastName}
-                        aria-describedby={errors.lastName ? "err-lastName" : undefined}
+                        aria-describedby={
+                          errors.lastName ? "err-lastName" : undefined
+                        }
                       />
-                      {errors.lastName && <span id="err-lastName" className="form-error" role="alert">{errors.lastName}</span>}
+                      {errors.lastName && (
+                        <span
+                          id="err-lastName"
+                          className="form-error"
+                          role="alert"
+                        >
+                          {errors.lastName}
+                        </span>
+                      )}
                     </div>
                   </div>
 
                   <div className="form-row" style={{ marginTop: 16 }}>
                     <div className="form-group" style={{ marginBottom: 0 }}>
-                      <label className="form-label" htmlFor="email">Email *</label>
+                      <label className="form-label" htmlFor="email">
+                        Email *
+                      </label>
                       <input
                         id="email"
                         required
@@ -691,12 +1010,24 @@ export default function ChallengePage() {
                         value={formData.email}
                         onChange={updateField("email")}
                         aria-invalid={!!errors.email}
-                        aria-describedby={errors.email ? "err-email" : undefined}
+                        aria-describedby={
+                          errors.email ? "err-email" : undefined
+                        }
                       />
-                      {errors.email && <span id="err-email" className="form-error" role="alert">{errors.email}</span>}
+                      {errors.email && (
+                        <span
+                          id="err-email"
+                          className="form-error"
+                          role="alert"
+                        >
+                          {errors.email}
+                        </span>
+                      )}
                     </div>
                     <div className="form-group" style={{ marginBottom: 0 }}>
-                      <label className="form-label" htmlFor="phone">Phone</label>
+                      <label className="form-label" htmlFor="phone">
+                        Phone
+                      </label>
                       <input
                         id="phone"
                         type="tel"
@@ -705,14 +1036,26 @@ export default function ChallengePage() {
                         value={formData.phone}
                         onChange={updateField("phone")}
                         aria-invalid={!!errors.phone}
-                        aria-describedby={errors.phone ? "err-phone" : undefined}
+                        aria-describedby={
+                          errors.phone ? "err-phone" : undefined
+                        }
                       />
-                      {errors.phone && <span id="err-phone" className="form-error" role="alert">{errors.phone}</span>}
+                      {errors.phone && (
+                        <span
+                          id="err-phone"
+                          className="form-error"
+                          role="alert"
+                        >
+                          {errors.phone}
+                        </span>
+                      )}
                     </div>
                   </div>
 
                   <div className="form-group" style={{ marginTop: 16 }}>
-                    <label className="form-label" htmlFor="company">Company / Project Name</label>
+                    <label className="form-label" htmlFor="company">
+                      Company / Project Name
+                    </label>
                     <input
                       id="company"
                       className="form-input"
@@ -723,7 +1066,9 @@ export default function ChallengePage() {
                   </div>
 
                   <div className="form-group">
-                    <label className="form-label" htmlFor="idea">Tell us your idea *</label>
+                    <label className="form-label" htmlFor="idea">
+                      Tell us your idea *
+                    </label>
                     <textarea
                       id="idea"
                       required
@@ -734,13 +1079,24 @@ export default function ChallengePage() {
                       aria-invalid={!!errors.idea}
                       aria-describedby={errors.idea ? "err-idea" : undefined}
                     />
-                    {errors.idea && <span id="err-idea" className="form-error" role="alert">{errors.idea}</span>}
+                    {errors.idea && (
+                      <span id="err-idea" className="form-error" role="alert">
+                        {errors.idea}
+                      </span>
+                    )}
                   </div>
 
                   <div className="form-row">
                     <div className="form-group" style={{ marginBottom: 0 }}>
-                      <label className="form-label" htmlFor="budget">Budget Range</label>
-                      <select id="budget" className="form-input" value={formData.budget} onChange={updateField("budget")}>
+                      <label className="form-label" htmlFor="budget">
+                        Budget Range
+                      </label>
+                      <select
+                        id="budget"
+                        className="form-input"
+                        value={formData.budget}
+                        onChange={updateField("budget")}
+                      >
                         <option value="">Select range</option>
                         <option>Under ₹1 Lakh</option>
                         <option>₹1L – ₹5L</option>
@@ -750,8 +1106,15 @@ export default function ChallengePage() {
                       </select>
                     </div>
                     <div className="form-group" style={{ marginBottom: 0 }}>
-                      <label className="form-label" htmlFor="hear">How did you hear about us?</label>
-                      <select id="hear" className="form-input" value={formData.hear} onChange={updateField("hear")}>
+                      <label className="form-label" htmlFor="hear">
+                        How did you hear about us?
+                      </label>
+                      <select
+                        id="hear"
+                        className="form-input"
+                        value={formData.hear}
+                        onChange={updateField("hear")}
+                      >
                         <option value="">Select</option>
                         <option>YouTube / Reels</option>
                         <option>LinkedIn</option>
@@ -763,14 +1126,27 @@ export default function ChallengePage() {
                     </div>
                   </div>
 
-                  <button className="form-submit" type="submit" disabled={submitting}>
+                  <button
+                    className="form-submit"
+                    type="submit"
+                    disabled={submitting}
+                  >
                     {submitting ? (
-                      <><div className="spinner" aria-hidden="true" /> Reserving your slot...</>
+                      <>
+                        <div className="spinner" aria-hidden="true" /> Reserving
+                        your slot...
+                      </>
                     ) : (
-                      <>Start My 24-Hour Challenge <span aria-hidden="true">→</span></>
+                      <>
+                        Start My 24-Hour Challenge{" "}
+                        <span aria-hidden="true">→</span>
+                      </>
                     )}
                   </button>
-                  <p className="form-note">No payment required. No long contracts. Just your idea — we'll handle the rest.</p>
+                  <p className="form-note">
+                    No payment required. No long contracts. Just your idea —
+                    we'll handle the rest.
+                  </p>
                 </form>
               </>
             )}
@@ -781,14 +1157,34 @@ export default function ChallengePage() {
       {/* FOOTER */}
       <footer className="footer" role="contentinfo">
         <div className="footer-inner">
-          <div className="footer-logo">tail<span>webs</span></div>
-          <div className="footer-links" role="navigation" aria-label="Footer links">
-            <a className="footer-link" href="https://tailwebs.com" target="_blank" rel="noopener noreferrer">tailwebs.com</a>
-            <a className="footer-link" href="tel:+919590708339">+91 9590708339</a>
-            <a className="footer-link" href="mailto:hello@tailwebs.com">hello@tailwebs.com</a>
+          <div className="footer-logo">
+            tail<span>webs</span>
+          </div>
+          <div
+            className="footer-links"
+            role="navigation"
+            aria-label="Footer links"
+          >
+            <a
+              className="footer-link"
+              href="https://tailwebs.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              tailwebs.com
+            </a>
+            <a className="footer-link" href="tel:+919590708339">
+              +91 9590708339
+            </a>
+            <a className="footer-link" href="mailto:hello@tailwebs.com">
+              hello@tailwebs.com
+            </a>
             <span className="footer-link">Bengaluru, Karnataka</span>
           </div>
-          <div className="footer-copy">© {new Date().getFullYear()} Tailwebs Technology Pvt. Ltd. All rights reserved.</div>
+          <div className="footer-copy">
+            © {new Date().getFullYear()} Tailwebs Technology Pvt. Ltd. All
+            rights reserved.
+          </div>
         </div>
       </footer>
     </>
