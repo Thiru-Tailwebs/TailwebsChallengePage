@@ -10,9 +10,6 @@ export default function Footer() {
           tail<span className="text-tw-primary">webs</span>
         </div>
         <div className="flex gap-6 flex-wrap max-md:justify-center" role="navigation" aria-label="Footer links">
-          <a className={linkClass} href="https://tailwebs.com" target="_blank" rel="noopener noreferrer">tailwebs.com</a>
-          <a className={linkClass} href="tel:+919590708339">+91 9590708339</a>
-          <a className={linkClass} href="mailto:hello@tailwebs.com">hello@tailwebs.com</a>
           <span className="text-[0.82rem] text-tw-muted">Bengaluru, Karnataka</span>
           <Link className={linkClass} to="/privacy-policy">Privacy Policy</Link>
         </div>

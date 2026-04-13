@@ -28,9 +28,9 @@ export default function ChallengeForm() {
   const validate = useCallback(() => {
     const errs = {};
     if (!formData.firstName.trim()) errs.firstName = "First name is required";
-    if (!formData.lastName.trim()) errs.lastName = "Last name is required";
     if (!formData.email.trim()) errs.email = "Email is required";
     else if (!validateEmail(formData.email)) errs.email = "Enter a valid email";
+    if (!formData.company.trim()) errs.company = "Company / Project name is required";
     if (!validatePhone(formData.phone))
       errs.phone = "Enter a valid phone number";
     if (!formData.idea.trim()) errs.idea = "Tell us about your idea";
@@ -181,11 +181,10 @@ export default function ChallengeForm() {
                   </div>
                   <div className="flex flex-col gap-[7px]">
                     <label className={labelClass} htmlFor="lastName">
-                      Last Name *
+                      Last Name
                     </label>
                     <input
                       id="lastName"
-                      required
                       className={inputClass}
                       placeholder="Sharma"
                       value={formData.lastName}
@@ -261,15 +260,29 @@ export default function ChallengeForm() {
 
                 <div className="flex flex-col gap-[7px] mb-4">
                   <label className={labelClass} htmlFor="company">
-                    Company / Project Name
+                    Company / Project Name *
                   </label>
                   <input
                     id="company"
+                    required
                     className={inputClass}
                     placeholder="Your startup or company"
                     value={formData.company}
                     onChange={updateField("company")}
+                    aria-invalid={!!errors.company}
+                    aria-describedby={
+                      errors.company ? "err-company" : undefined
+                    }
                   />
+                  {errors.company && (
+                    <span
+                      id="err-company"
+                      className="text-[0.75rem] text-[#cf2e2e] mt-1"
+                      role="alert"
+                    >
+                      {errors.company}
+                    </span>
+                  )}
                 </div>
 
                 <div className="flex flex-col gap-[7px] mb-4">
