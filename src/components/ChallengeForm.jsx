@@ -80,8 +80,14 @@ export default function ChallengeForm() {
         // Meta Pixel (IMPORTANT)
         if (window.fbq) {
           window.fbq("track", "Lead");
+
+          // give time for event to send
+          setTimeout(() => {
+            setSubmitted(true);
+          }, 500);
+        } else {
+          setSubmitted(true);
         }
-        setSubmitted(true);
       } else {
         setSubmitError(
           result.message || "Submission failed. Please try again.",
