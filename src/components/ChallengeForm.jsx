@@ -62,7 +62,12 @@ export default function ChallengeForm() {
 
       // Send to Google Apps Script
       const scriptUrl = import.meta.env.VITE_APPS_SCRIPT_URL;
-      const payload = new URLSearchParams({ ...formData, recaptchaToken });
+      const eventId = Date.now().toString();
+      const payload = new URLSearchParams({
+        ...formData,
+        recaptchaToken,
+        eventId,
+      });
 
       const res = await fetch(scriptUrl, {
         method: "POST",
@@ -79,9 +84,8 @@ export default function ChallengeForm() {
         });
         // Meta Pixel (IMPORTANT)
         if (window.fbq) {
-          window.fbq("track", "Lead");
+          window.fbq("track", "Lead", {}, { eventID: eventId });
 
-          // give time for event to send
           setTimeout(() => {
             setSubmitted(true);
           }, 500);
