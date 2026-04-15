@@ -6,7 +6,7 @@ function validateEmail(email) {
 }
 
 function validatePhone(phone) {
-  if (!phone) return true;
+  if (!phone) return false;
   return /^[+]?[\d\s()-]{7,20}$/.test(phone);
 }
 
@@ -130,7 +130,7 @@ export default function ChallengeForm() {
                 🚀
               </div>
               <div className="font-heading text-2xl font-extrabold mb-3 text-tw-text-inv">
-                You're in. We'll be in touch within 2 hours.
+                You're in. We'll be in touch within 1 working day.
               </div>
               <p className="text-[0.95rem] text-tw-muted-light leading-[1.7]">
                 Thanks {formData.firstName}! Your challenge slot is being
@@ -249,10 +249,11 @@ export default function ChallengeForm() {
                   </div>
                   <div className="flex flex-col gap-[7px]">
                     <label className={labelClass} htmlFor="phone">
-                      Phone
+                      Phone *
                     </label>
                     <input
                       id="phone"
+                      required
                       type="tel"
                       className={inputClass}
                       placeholder="+91 98765 43210"
