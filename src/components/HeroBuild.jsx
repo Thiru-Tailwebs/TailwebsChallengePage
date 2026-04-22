@@ -62,7 +62,7 @@ export default function HeroBuild() {
 
         {/* Right column — form */}
         <div className="fade-up delay-2" id="challenge-form">
-          <ChallengeFormCard />
+          <ChallengeFormCard compact />
         </div>
       </div>
     </section>

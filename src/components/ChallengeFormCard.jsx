@@ -10,7 +10,7 @@ function validatePhone(phone) {
   return /^[+]?[\d\s()-]{7,20}$/.test(phone);
 }
 
-export default function ChallengeFormCard() {
+export default function ChallengeFormCard({ compact = false }) {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -131,17 +131,23 @@ export default function ChallengeFormCard() {
             Start the Challenge
           </span>
           <div
-            className="font-heading text-[clamp(1.6rem,3vw,2.2rem)] font-extrabold tracking-tight mb-2.5 leading-[1.15] text-tw-text-inv"
+            className={`font-heading text-[clamp(1.6rem,3vw,2.2rem)] font-extrabold tracking-tight leading-[1.15] text-tw-text-inv ${compact ? "mb-9" : "mb-2.5"}`}
             id="form-heading"
           >
             Reserve your slot.
-            <br />
-            Share your idea.
+            {!compact && (
+              <>
+                <br />
+                Share your idea.
+              </>
+            )}
           </div>
-          <p className="text-[0.95rem] text-tw-muted-light mb-9 leading-[1.65]">
-            We'll confirm your slot and book your 30-minute kick-off call
-            within 2 hours. No commitment needed — just your idea.
-          </p>
+          {!compact && (
+            <p className="text-[0.95rem] text-tw-muted-light mb-9 leading-[1.65]">
+              We'll confirm your slot and book your 30-minute kick-off call
+              within 2 hours. No commitment needed — just your idea.
+            </p>
+          )}
 
           {submitError && (
             <div
@@ -369,6 +375,12 @@ export default function ChallengeFormCard() {
                 </>
               )}
             </button>
+            {compact && (
+              <p className="text-[0.88rem] text-tw-muted-light text-center mt-4 leading-[1.65]">
+                We'll confirm your slot and book your 30-minute kick-off call
+                within 2 hours. No commitment needed — just your idea.
+              </p>
+            )}
             <p className="text-[0.78rem] text-tw-muted-light text-center mt-4 opacity-70">
               No payment required. No long contracts. Just your idea — we'll
               handle the rest.
