@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function Footer() {
+export default function Footer({ privacyPath = "/privacy-policy" }) {
   const linkClass =
     "text-[0.82rem] text-tw-muted no-underline transition-colors hover:text-tw-primary focus-visible:text-tw-primary focus-visible:outline-none";
 
@@ -21,7 +21,7 @@ export default function Footer() {
           <span className="text-[0.82rem] text-tw-muted">
             Bengaluru, Karnataka
           </span>
-          <Link className={linkClass} to="/privacy-policy">
+          <Link className={linkClass} to={privacyPath}>
             Privacy Policy
           </Link>
         </div>

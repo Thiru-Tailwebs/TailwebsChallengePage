@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { scrollTo } from "../utils/scroll";
 
-export default function Navbar() {
+export default function Navbar({ homePath = "/" }) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export default function Navbar() {
       role="navigation"
       aria-label="Main navigation"
     >
-      <a className="font-heading font-extrabold text-[1.3rem] text-tw-dark tracking-tight no-underline" href="/" aria-label="Tailwebs home">
+      <a className="font-heading font-extrabold text-[1.3rem] text-tw-dark tracking-tight no-underline" href={homePath} aria-label="Tailwebs home">
         tail<span className="text-tw-primary">webs</span>
       </a>
 

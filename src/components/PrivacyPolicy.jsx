@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
 
-export default function PrivacyPolicy() {
+export default function PrivacyPolicy({ homePath = "/" }) {
   return (
     <div className="min-h-screen bg-white">
       <header className="border-b border-tw-border py-5 px-[5%]">
         <div className="max-w-[800px] mx-auto flex items-center justify-between">
-          <Link to="/" className="font-heading font-extrabold text-[1.15rem] text-tw-dark no-underline">
+          <Link to={homePath} className="font-heading font-extrabold text-[1.15rem] text-tw-dark no-underline">
             tail<span className="text-tw-primary">webs</span>
           </Link>
           <Link
-            to="/"
+            to={homePath}
             className="text-[0.85rem] text-tw-primary no-underline font-medium hover:underline"
           >
             &larr; Back to Home
