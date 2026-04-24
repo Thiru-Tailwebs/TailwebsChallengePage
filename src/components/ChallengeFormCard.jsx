@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import ReactGA from "react-ga4";
 
 function validateEmail(email) {
@@ -10,7 +10,38 @@ function validatePhone(phone) {
   return /^[+]?[\d\s()-]{7,20}$/.test(phone);
 }
 
+const UTM_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
+
+function captureAttribution() {
+  if (typeof window === "undefined") return;
+  if (!sessionStorage.getItem("tw_landing_page")) {
+    sessionStorage.setItem("tw_landing_page", window.location.pathname);
+  }
+  const params = new URLSearchParams(window.location.search);
+  UTM_KEYS.forEach((key) => {
+    if (!sessionStorage.getItem("tw_" + key)) {
+      const val = params.get(key);
+      if (val) sessionStorage.setItem("tw_" + key, val);
+    }
+  });
+}
+
+function readAttribution() {
+  return {
+    landingPage: sessionStorage.getItem("tw_landing_page") || window.location.pathname,
+    utmSource: sessionStorage.getItem("tw_utm_source") || "",
+    utmMedium: sessionStorage.getItem("tw_utm_medium") || "",
+    utmCampaign: sessionStorage.getItem("tw_utm_campaign") || "",
+    utmContent: sessionStorage.getItem("tw_utm_content") || "",
+    utmTerm: sessionStorage.getItem("tw_utm_term") || "",
+  };
+}
+
 export default function ChallengeFormCard({ compact = false }) {
+  useEffect(() => {
+    captureAttribution();
+  }, []);
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -60,7 +91,11 @@ export default function ChallengeFormCard({ compact = false }) {
       });
 
       const scriptUrl = import.meta.env.VITE_APPS_SCRIPT_URL;
-      const payload = new URLSearchParams({ ...formData, recaptchaToken });
+      const payload = new URLSearchParams({
+        ...formData,
+        ...readAttribution(),
+        recaptchaToken,
+      });
 
       const res = await fetch(scriptUrl, {
         method: "POST",
